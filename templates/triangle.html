@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find area of Circle</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+        }
+
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 450px;
+            margin: auto;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 1.1em;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px #4CAF50;
+            animation: typing 1s steps(30, end) forwards;
+        }
+
+        input[type="submit"] {
+            padding: 12px 25px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 8px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <title>Find area of triangle</title>
+    <h1>Area of Triangle</h1>
+
+    <form action="/triangle" method="POST">
+        <label>Base:</label>
+        <input type="number" step="any" name="base" required>
+        <br>
+        <label>Height:</label>
+        <input type="number" step="any" name="height" required>
+        <br>
+        <br>
+        <input type="submit" value="Calculate">
+    </form>
+
+    {% if result%}
+        <p>Result: {{ result }}</p>
+    {% endif %}
+    <center><a style= "font-size: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" href="/myworks">Back</a></center>
+    </div>
+</body>
+</html>
