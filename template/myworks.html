@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <style>
+    .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            justify-items: center;
+            align-items: center;
+            max-width: 700px;
+            margin: 30px auto;
+        }
+
+        .choice {
+            list-style: none;
+            text-align: center;
+        }
+
+        .choice p {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .choice a {
+            font-size: 23px;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 10px;
+            display: inline-block;
+            transition: 0.3s;
+        }</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <header class="header">
+        <div class="header-left">My Portfolio</div>
+        <nav class="header-right">
+            <a href="/">Home</a>
+            <a href="/library">Library</a>
+            <a href="/profile">Profile</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+<body>
+    <Center><h1 style="font-size: 50px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">PROGRAMMING WORKS</h1></Center>
+
+<div class = "grid-container">
+    <li class="choice">
+    <p style="font-size: 15px;">Uppercase strings</p>
+    <a style= "font-size: 23px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" href="/works" class="home-btn">ToUpperCase</a></li>
+    <li class="choice">
+    <p style="font-size: 15px;">Solve area of a circle</p>
+    <a style= "font-size: 23px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" href="/circle" class="home-btn">Area of a Circle</a></li>
+    <li class="choice">
+    <p style="font-size: 15px;">Solve area of a triangle</p>
+    <a style= "font-size: 23px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" href="/triangle" class="home-btn">Area of Triangle</a></li>
+    <li class="choice">
+    <p style="font-size: 15px;">Convert Infix to Postfix</p>
+    <a style= "font-size: 23px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" href="/converter" class="home-btn">Infix to Postfix Converter</a></li>
+    
+    
+    <br>
+</div>
+<li><center><a style= "font-size: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" href="/">Back</a></center></li>
+</body>
+</html>
